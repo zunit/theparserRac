@@ -1,0 +1,9 @@
+#lang racket
+(define (count-lst lst)
+  (count-lst-helper 0 lst))
+
+(define (count-lst-helper acc lst)
+  (if (empty? lst)
+      acc
+      (count-lst-helper (+ acc (string-length (first lst))) (rest lst)))) 
+  
